@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_arm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.05079 0.43644 -3.929E-09"
+        rpy="0 0 0" />
+      <mass
+        value="273.23" />
+      <inertia
+        ixx="160.51"
+        ixy="-15.419"
+        ixz="-3.821E-06"
+        iyy="285.82"
+        iyz="-2.0854E-06"
+        izz="189.48" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rear_transmission">
+    <inertial>
+      <origin
+        xyz="-3.9489E-15 -2.7756E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="38.804" />
+      <inertia
+        ixx="2.6008"
+        ixy="-1.8244E-15"
+        ixz="-6.4608E-15"
+        iyy="100.77"
+        iyz="-1.3756E-31"
+        izz="100.77" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/rear_transmission.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/rear_transmission.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_transmission_joint"
+    type="continuous">
+    <origin
+      xyz="-0.625 0 0.125"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_transmission" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="front_left_pivot">
+    <inertial>
+      <origin
+        xyz="-5.2398E-07 0.19906 -0.33437"
+        rpy="0 0 0" />
+      <mass
+        value="5.4" />
+      <inertia
+        ixx="0.99062"
+        ixy="1.52E-08"
+        ixz="3.0168E-08"
+        iyy="0.67248"
+        iyz="-0.25753"
+        izz="0.43151" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_left_pivot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_left_pivot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_pivot_joint"
+    type="continuous">
+    <origin
+      xyz="0.62278 0.875 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_pivot" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="0.25 0 -4.6629E-15"
+        rpy="0 0 0" />
+      <mass
+        value="9.056" />
+      <inertia
+        ixx="1.0932"
+        ixy="-5.7774E-33"
+        ixz="-6.5206E-16"
+        iyy="0.91001"
+        iyz="2.2598E-33"
+        izz="0.91001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.125 -0.1875"
+      rpy="0 1.5708 0" />
+    <parent
+      link="front_left_pivot" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="front_right_pivot">
+    <inertial>
+      <origin
+        xyz="-5.2398E-07 0.19906 -0.33437"
+        rpy="0 0 0" />
+      <mass
+        value="5.4" />
+      <inertia
+        ixx="0.99062"
+        ixy="1.52E-08"
+        ixz="3.0168E-08"
+        iyy="0.67248"
+        iyz="-0.25753"
+        izz="0.43151" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_right_pivot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_right_pivot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_pivot_joint"
+    type="continuous">
+    <origin
+      xyz="0.62278 -0.875 0"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_pivot" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.25 2.9143E-16 4.5519E-15"
+        rpy="0 0 0" />
+      <mass
+        value="9.056" />
+      <inertia
+        ixx="1.0932"
+        ixy="-3.8516E-33"
+        ixz="-6.5206E-16"
+        iyy="0.91001"
+        iyz="2.2598E-33"
+        izz="0.91001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.125 -0.1875"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="front_right_pivot" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rotating_arm">
+    <inertial>
+      <origin
+        xyz="-8.0067E-09 0.22058 -0.042397"
+        rpy="0 0 0" />
+      <mass
+        value="16.073" />
+      <inertia
+        ixx="0.15042"
+        ixy="-4.406E-09"
+        ixz="3.0039E-08"
+        iyy="0.16036"
+        iyz="0.03538"
+        izz="0.15404" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/rotating_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/rotating_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotating_arm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.37722 0 0.75"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotating_arm" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.15"
+      upper="1.15"
+      effort="30"
+      velocity="0.2" />
+  </joint>
+  <link
+    name="extending_arm">
+    <inertial>
+      <origin
+        xyz="-4.3203E-16 -0.38189 0.26262"
+        rpy="0 0 0" />
+      <mass
+        value="5.246" />
+      <inertia
+        ixx="0.82536"
+        ixy="-4.5108E-16"
+        ixz="8.3461E-16"
+        iyy="0.22895"
+        iyz="0.1708"
+        izz="0.83089" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/extending_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/extending_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="extending_arm_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.38 -0.1539"
+      rpy="-0.016689 0 3.1416" />
+    <parent
+      link="rotating_arm" />
+    <child
+      link="extending_arm" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.1"
+      effort="30"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="picking_arm">
+    <inertial>
+      <origin
+        xyz="0.21069 0.37923 -4.7848E-16"
+        rpy="0 0 0" />
+      <mass
+        value="2.7472" />
+      <inertia
+        ixx="0.61578"
+        ixy="-0.21275"
+        ixz="-1.3361E-16"
+        iyy="0.21938"
+        iyz="1.0997E-15"
+        izz="0.65117" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/picking_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/picking_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="picking_arm_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.84976 0.30067"
+      rpy="1.5708 1.3576 -1.5708" />
+    <parent
+      link="extending_arm" />
+    <child
+      link="picking_arm" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="2.5"
+      effort="30000"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="jaw_arm">
+    <inertial>
+      <origin
+        xyz="0.10169 -6.1062E-16 -2.1115E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.7878" />
+      <inertia
+        ixx="0.0096899"
+        ixy="-6.6155E-17"
+        ixz="1.3752E-18"
+        iyy="0.027661"
+        iyz="3.5404E-20"
+        izz="0.027738" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/jaw_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/jaw_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jaw_arm_joint"
+    type="revolute">
+    <origin
+      xyz="0.39805 0.79363 0"
+      rpy="3.1416 0 1.3409" />
+    <parent
+      link="picking_arm" />
+    <child
+      link="jaw_arm" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.15"
+      upper="1.15"
+      effort="30"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="left_jaw">
+    <inertial>
+      <origin
+        xyz="-2.2815E-08 0.32731 -0.038494"
+        rpy="0 0 0" />
+      <mass
+        value="0.14771" />
+      <inertia
+        ixx="0.1259"
+        ixy="-3.6284E-09"
+        ixz="-1.839E-09"
+        iyy="0.035165"
+        iyz="-0.026696"
+        izz="0.12677" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/left_jaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/left_jaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_jaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.335 0 -0.055"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="jaw_arm" />
+    <child
+      link="left_jaw" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.15"
+      upper="1.15"
+      effort="30"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="right_jaw">
+    <inertial>
+      <origin
+        xyz="-2.2013E-08 0.32731 -0.038494"
+        rpy="0 0 0" />
+      <mass
+        value="0.14771" />
+      <inertia
+        ixx="0.1259"
+        ixy="-3.4619E-09"
+        ixz="-1.7716E-09"
+        iyy="0.035165"
+        iyz="-0.026696"
+        izz="0.12677" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/right_jaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/right_jaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_jaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.335 0 0.055"
+      rpy="-3.1211 0 1.5708" />
+    <parent
+      link="jaw_arm" />
+    <child
+      link="right_jaw" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.15"
+      upper="1.15"
+      effort="30"
+      velocity="0.1" />
+  </joint>
+
+  <transmission name="rear_wheel_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_transmission_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="back_motor">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="front_left_pivot_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_left_pivot_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_left_pivot_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="front_right_pivot_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_right_pivot_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_right_pivot_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="front_right_wheel_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_right_wheel_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_right_wheel_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="front_left_wheel_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_left_wheel_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_left_wheel_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rotating_arm_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rotating_arm_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rotating_arm_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="extending_arm_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="extending_arm_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="extending_arm_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="picking_arm_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="picking_arm_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="picking_arm_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="jaw_arm_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jaw_arm_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="jaw_arm_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="left_jaw_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_jaw_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_jaw_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="right_jaw_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_jaw_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_jaw_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+</robot>

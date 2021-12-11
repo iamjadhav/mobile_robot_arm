@@ -1,0 +1,113 @@
+robot_arm:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Controller 1
+  front_left_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: front_left_pivot_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        front_left_pivot_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 2
+  front_right_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: front_right_pivot_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        front_right_pivot_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 3
+  rear_controller: 
+    type: velocity_controllers/JointVelocityController # Type of controller. 
+    joint: rear_transmission_joint  
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        rear_transmission_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 4
+  rotating_arm_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: rotating_arm_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0} 
+    gazebo_ros_control:
+      pid_gains:
+        rotating_arm_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 5
+  extending_arm_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: extending_arm_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        extending_arm_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 6
+  picking_arm_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: picking_arm_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0} 
+    gazebo_ros_control:
+      pid_gains:
+        picking_arm_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 7
+  jaw_arm_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: jaw_arm_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        jaw_arm_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+  # Controller 8
+  left_jaw_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: left_jaw_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        left_jaw_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
+
+
+  # Controller 8
+  right_jaw_controller: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: right_jaw_joint 
+    pid : {p: 100.0, i: 0.01, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        right_jaw_joint:
+          p = 100.0
+          i = 0.01
+          d = 10.0
