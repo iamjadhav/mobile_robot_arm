@@ -1,0 +1,34 @@
+<!-- Every launch file starts with this command -->
+
+<launch> 
+	<include file= "$(find gazebo_ros)/launch/empty_world.launch"> 
+		<arg name="world_name" value="$(find robot_arm)/launch/final_world.world"/> 
+	</include>
+
+	<param name= "robot_description" command="$(find xacro)/xacro $(find robot_arm)/urdf/robot_arm_integration.xacro" />
+    <param name = "my_robot" value="robot_arm"/> 
+    <arg name ="init_pose" value="-x 0 -y 0 -z 0 -R 0 -P 0 -Y 0"/>
+
+	<rosparam file="$(find robot_arm)/config/config_controllers.yaml" command="load"/>
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="use_gui" value="False"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="map_to_base" args="1 0 0 0 0 0 1 /map /base_link 10" />
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    	output="screen" ns="/robot_arm" args="joint_state_controller front_left_controller front_right_controller rear_controller rotating_arm_controller extending_arm_controller picking_arm_controller  		jaw_arm_controller left_jaw_controller right_jaw_controller" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+    <node args="$(arg init_pose) -urdf -param robot_description -model  my_robot   " name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"/>
+
+    <node
+	name="fake_joint_calibration"
+	pkg="rostopic"
+	type="rostopic"
+	args="pub /calibrated std_msgs/Bool true" 
+    />
+
+</launch>
