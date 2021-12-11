@@ -101,7 +101,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/wall.stl</uri>
+              <uri>/home/aditya/Downloads/wall.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -122,7 +122,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/wall.stl</uri>
+              <uri>/home/aditya/Downloads/wall.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -203,7 +203,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/table.stl</uri>
+              <uri>/home/aditya/Downloads/table.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -230,7 +230,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/table.stl</uri>
+              <uri>/home/aditya/Downloads/table.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -308,7 +308,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -335,7 +335,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -413,7 +413,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/table.stl</uri>
+              <uri>/home/aditya/Downloads/table.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -440,7 +440,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/table.stl</uri>
+              <uri>/home/aditya/Downloads/table.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -518,7 +518,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -545,7 +545,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -619,7 +619,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -640,7 +640,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -717,7 +717,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -738,7 +738,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -815,7 +815,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -836,7 +836,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/<your-workspace-location>/src/robot_arm/custom_models/object.stl</uri>
+              <uri>/home/aditya/Downloads/object.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
